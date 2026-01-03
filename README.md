@@ -1,8 +1,10 @@
 # fish-aws
 
 A port of some nice features of [AWS plugin](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/aws/README.md) of Oh My Zsh framework.
+
 The main work of translation from zsh to fish has been made by Claude. The result has been approved and tested by me.
-The usage and configuration part of this documentation come from the original documentation of the Oh My Zsh [AWS plugin](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/aws/README.md).
+
+The following parts of this documentation come from the original documentation of the Oh My Zsh [AWS plugin](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/aws/README.md).
 
 ## Installation
 
@@ -11,7 +13,7 @@ Install using [fisher](https://github.com/jorgebucaran/fisher):
 fisher install remmercier/fish-aws
 ```
 
-## Usage
+## Plugins commands
 
 * `asp [<profile>]`: sets `$AWS_PROFILE` and `$AWS_DEFAULT_PROFILE` (legacy) to `<profile>`.
   It also sets `$AWS_EB_PROFILE` to `<profile>` for the Elastic Beanstalk CLI. It sets `$AWS_PROFILE_REGION` for display in `aws_prompt_info`.
@@ -34,11 +36,15 @@ fisher install remmercier/fish-aws
 
 * `agr`: gets the current value of `$AWS_REGION`.
 
-* `aws_profiles`: lists the available profiles in the  `$AWS_CONFIG_FILE` (default: `~/.aws/config`).
+* `aws_profiles`: lists the available profiles in the `$AWS_CONFIG_FILE` (default: `~/.aws/config`).
   Used to provide completion for the `asp` function.
 
 * `aws_regions`: lists the available regions.
   Used to provide completion for the `asr` function.
+
+## Plugin options
+
+* Set AWS_PROFILE_STATE_ENABLED=true in your fish configuration if you want the aws profile to persist between shell sessions. This option might slow down your shell startup time. By default the state file path is /tmp/.aws_current_profile. This means that the state won't survive a reboot or otherwise GC. You can control the state file path using the AWS_STATE_FILE environment variable.
 
 ## Configuration
 
