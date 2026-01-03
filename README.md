@@ -69,3 +69,11 @@ source_profile = source-profile-name
 region = us-east-1
 output = json
 ```
+
+# Similar projects
+
+* [anakaiti/fish-aws-profile-switcher: Fish shell plugin to switch between AWS profiles](https://github.com/anakaiti/fish-aws-profile-switcher)
+* [AWS profile switcher for fish shell](https://gist.github.com/ariksidney/c981938e37052335d8305746568474c9)
+* [shidil/awsctx: Shell script to switch between aws cli profiles using fzf and trigger sso login if unauthenticated](https://github.com/shidil/awsctx)
+
+I made this project cause most of existing projects listed above do not handle the login process.
